@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2743eeec-8538-4674-9fde-547a16917be5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/admin/Branches.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/branch_management/add.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/branch_management/category/add.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/branch_management/category/edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/branch_management/category/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/branch_management/details.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/branch_management/edit.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/branch_management/index.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/ngapp/branchManagementCTRL.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitlab-ci.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site_data/SVG icons/icomoon (1).zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site_data/documents/2017_Financials_Tax_Return_pdf.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site_data/documents/Auditsheet.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site_data/documents/Auditsheet1.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site_data/documents/Errors.docx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site_data/documents/Errors.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site_data/documents/UsermanualASA.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site_data/documents/superaudit_issues.docx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site_data/documents/superaudit_issues1.docx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site_data/logos/logo_Sedemac.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/New folder/icons-fonts2.eot" afterPath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/New folder/icons-fonts2.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/New folder/icons-fonts2.ttf" afterPath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/New folder/icons-fonts2.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/New folder/icons-fonts2.woff" afterPath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/New folder/icons-fonts2.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/icons-fonts.eot" afterPath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/icons-fonts.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/icons-fonts.ttf" afterPath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/icons-fonts.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/icons-fonts.woff" afterPath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/icons-fonts.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/icons-fonts2.eot" afterPath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/icons-fonts2.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/icons-fonts2.ttf" afterPath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/icons-fonts2.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/icons-fonts2.woff" afterPath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/icons-fonts2.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/fonts/icons/icon-font-2.eot" afterPath="$PROJECT_DIR$/mockup/fonts/icons/icon-font-2.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/fonts/icons/icon-font-2.ttf" afterPath="$PROJECT_DIR$/mockup/fonts/icons/icon-font-2.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/fonts/icons/icon-font-2.woff" afterPath="$PROJECT_DIR$/mockup/fonts/icons/icon-font-2.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/fonts/icons/icons-fonts.eot" afterPath="$PROJECT_DIR$/mockup/fonts/icons/icons-fonts.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/fonts/icons/icons-fonts.ttf" afterPath="$PROJECT_DIR$/mockup/fonts/icons/icons-fonts.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/fonts/icons/icons-fonts.woff" afterPath="$PROJECT_DIR$/mockup/fonts/icons/icons-fonts.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/img/aarna_logo.png" afterPath="$PROJECT_DIR$/mockup/img/aarna_logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/img/favicon.ico" afterPath="$PROJECT_DIR$/mockup/img/favicon.ico" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/img/footer_icon.png" afterPath="$PROJECT_DIR$/mockup/img/footer_icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/img/logo.png" afterPath="$PROJECT_DIR$/mockup/img/logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site_data/banners/banner.jpeg" afterPath="$PROJECT_DIR$/site_data/banners/banner.jpeg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site_data/user_profiles/admin/avatar33.jpg" afterPath="$PROJECT_DIR$/site_data/user_profiles/admin/avatar33.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site_data/user_profiles/admin/default.jpg" afterPath="$PROJECT_DIR$/site_data/user_profiles/admin/default.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site_data/user_profiles/avatar1.jpg" afterPath="$PROJECT_DIR$/site_data/user_profiles/avatar1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site_data/user_profiles/avatar3.jpg" afterPath="$PROJECT_DIR$/site_data/user_profiles/avatar3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site_data/user_profiles/avatar31.jpg" afterPath="$PROJECT_DIR$/site_data/user_profiles/avatar31.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site_data/user_profiles/avatar32.jpg" afterPath="$PROJECT_DIR$/site_data/user_profiles/avatar32.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site_data/user_profiles/avatar5.jpg" afterPath="$PROJECT_DIR$/site_data/user_profiles/avatar5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/_includes/sidemenu.php" afterPath="$PROJECT_DIR$/application/views/admin/_includes/sidemenu.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/User-Portal-Interface_6.php" afterPath="$PROJECT_DIR$/mockup/User-Portal-Interface_6.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/User-Portal-Interface_6_1.php" afterPath="$PROJECT_DIR$/mockup/User-Portal-Interface_6_1.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/User-Portal-Interface_7.php" afterPath="$PROJECT_DIR$/mockup/User-Portal-Interface_7.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/User-Portal-Interface_8.php" afterPath="$PROJECT_DIR$/mockup/User-Portal-Interface_8.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/mockup/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/css/custom.css" afterPath="$PROJECT_DIR$/mockup/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/New folder/icons-fonts2.svg" afterPath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/New folder/icons-fonts2.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/icons-fonts.svg" afterPath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/icons-fonts.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/icons-fonts2.svg" afterPath="$PROJECT_DIR$/mockup/fonts/icons/New folder (2)/icons-fonts2.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/fonts/icons/icon-font-2.svg" afterPath="$PROJECT_DIR$/mockup/fonts/icons/icon-font-2.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/fonts/icons/icons-fonts.svg" afterPath="$PROJECT_DIR$/mockup/fonts/icons/icons-fonts.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/footer.php" afterPath="$PROJECT_DIR$/mockup/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/header.php" afterPath="$PROJECT_DIR$/mockup/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/headermain.php" afterPath="$PROJECT_DIR$/mockup/headermain.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/index.php" afterPath="$PROJECT_DIR$/mockup/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/js/Example.php" afterPath="$PROJECT_DIR$/mockup/js/Example.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/js/bootstrap-lightbox.min.js" afterPath="$PROJECT_DIR$/mockup/js/bootstrap-lightbox.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/js/bootstrap-portfilter.js" afterPath="$PROJECT_DIR$/mockup/js/bootstrap-portfilter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/js/bootstrap-portfilter.min.js" afterPath="$PROJECT_DIR$/mockup/js/bootstrap-portfilter.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/js/bootstrap.js" afterPath="$PROJECT_DIR$/mockup/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/mockup/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/js/css3-animate-it.js" afterPath="$PROJECT_DIR$/mockup/js/css3-animate-it.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/js/jquery.circleGraphic.js" afterPath="$PROJECT_DIR$/mockup/js/jquery.circleGraphic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/js/npm.js" afterPath="$PROJECT_DIR$/mockup/js/npm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/js/responsive-tabs.js" afterPath="$PROJECT_DIR$/mockup/js/responsive-tabs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mockup/js/wow.min.js" afterPath="$PROJECT_DIR$/mockup/js/wow.min.js" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FUSProjectUsageTrigger">
+    <session id="1230937624">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="sidemenu.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/_includes/sidemenu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="16" column="64" lean-forward="true" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Branches.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/admin/Branches.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/branch_management/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="49" column="41" lean-forward="true" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="branchManagementCTRL.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/ngapp/branchManagementCTRL.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="115" column="19" lean-forward="false" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/branch_management/add.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="467">
+              <caret line="116" column="74" lean-forward="false" selection-start-line="116" selection-start-column="61" selection-end-line="116" selection-end-column="74" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ngGetAnnouncements</find>
+      <find>Add</find>
+      <find>submit</find>
+      <find>addAnnouncement</find>
+      <find>announcementboard_management</find>
+      <find>debugger</find>
+      <find>Message</find>
+      <find>message</find>
+      <find>announcements</find>
+      <find>/announcements</find>
+      <find>getc</find>
+      <find>Branchs</find>
+      <find>loadAddBranch</find>
+      <find>response</find>
+      <find>editBranch</find>
+      <find>edit</find>
+      <find>catego</find>
+      <find>User</find>
+      <find>last_name</find>
+      <find>contact_no</find>
+      <find>branch_phone</find>
+      <find>user</find>
+      <find>mobilePattern</find>
+      <find>placeholder</find>
+      <find>addBranchForm</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>announcement_management</replace>
+      <replace>Announcement</replace>
+      <replace>announcement</replace>
+      <replace>branche</replace>
+      <replace>branch</replace>
+      <replace>branch_code</replace>
+      <replace>branch_email</replace>
+      <replace>branch_mobile</replace>
+      <replace>branch_phone</replace>
+      <replace>branch_fax</replace>
+      <replace>Branch</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/assets/ngapp/announcementBoardManagementCTRL.js" />
+        <option value="$PROJECT_DIR$/application/views/admin/announcement_management/index.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/announcement_management/edit.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/announcement_management/add.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/announcement_management/details.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/Announcement.php" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/Branch.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/_includes/sidemenu.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/Branches.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/branch_management/index.php" />
+        <option value="$PROJECT_DIR$/assets/ngapp/branchManagementCTRL.js" />
+        <option value="$PROJECT_DIR$/application/views/admin/branch_management/add.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="1" />
+    <option name="width" value="1365" />
+    <option name="height" value="726" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lead_crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lead_crm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lead_crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lead_crm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lead_crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lead_crm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ngapp" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lead_crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lead_crm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lead_crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lead_crm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lead_crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lead_crm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lead_crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lead_crm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="branch_management" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lead_crm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lead_crm" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../NEFL-CRM" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xamp\htdocs\lead_crm\application\controllers\admin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xamp\htdocs\lead_crm\assets\ngapp" />
+      <recent name="C:\xamp\htdocs\lead_crm\application\controllers\admin\document" />
+      <recent name="C:\xamp\htdocs\lead_crm\application\views\admin" />
+      <recent name="$PROJECT_DIR$/assets/ngapp" />
+      <recent name="$PROJECT_DIR$/application/controllers/admin" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2743eeec-8538-4674-9fde-547a16917be5" name="Default" comment="" />
+      <created>1532333250121</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1532333250121</updated>
+      <workItem from="1532333251476" duration="7861000" />
+      <workItem from="1536048083459" duration="61000" />
+      <workItem from="1536252355153" duration="5143000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="13065000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="1" width="1365" height="726" extended-state="0" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24981467" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1121">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/announcement_management/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="70" column="106" lean-forward="false" selection-start-line="70" selection-start-column="106" selection-end-line="70" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/announcement_management/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="29" column="91" lean-forward="false" selection-start-line="29" selection-start-column="91" selection-end-line="29" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/announcement_management/details.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="29" column="91" lean-forward="false" selection-start-line="29" selection-start-column="91" selection-end-line="29" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/ngapp/announcementBoardManagementCTRL.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="139" column="28" lean-forward="false" selection-start-line="139" selection-start-column="15" selection-end-line="139" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/Announcement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="31" column="34" lean-forward="false" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/announcement_management/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="29" column="91" lean-forward="false" selection-start-line="29" selection-start-column="91" selection-end-line="29" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="115" column="49" lean-forward="true" selection-start-line="115" selection-start-column="49" selection-end-line="115" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/_includes/sidemenu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="64" lean-forward="true" selection-start-line="16" selection-start-column="64" selection-end-line="16" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/Branches.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/branch_management/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="49" column="41" lean-forward="true" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/angular.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="329" column="342" lean-forward="false" selection-start-line="329" selection-start-column="342" selection-end-line="329" selection-end-column="342" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/ngapp/branchManagementCTRL.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="115" column="19" lean-forward="false" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/branch_management/add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="116" column="74" lean-forward="false" selection-start-line="116" selection-start-column="61" selection-end-line="116" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

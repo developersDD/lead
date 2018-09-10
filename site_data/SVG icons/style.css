@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?5wu2ax');
+  src:  url('fonts/icomoon.eot?5wu2ax#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?5wu2ax') format('truetype'),
+    url('fonts/icomoon.woff?5wu2ax') format('woff'),
+    url('fonts/icomoon.svg?5wu2ax#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Back:before {
+  content: "\e916";
+}
+.icon-Logout:before {
+  content: "\e917";
+}
+.icon-Password:before {
+  content: "\e918";
+}
+.icon-Profile:before {
+  content: "\e919";
+}
+.icon-Profile-User:before {
+  content: "\e91a";
+}
+.icon-Add-New-Document:before {
+  content: "\e900";
+}
+.icon-Add-New-Message:before {
+  content: "\e901";
+}
+.icon-Add-New-Quicklink:before {
+  content: "\e902";
+}
+.icon-Add-User:before {
+  content: "\e903";
+}
+.icon-Banner:before {
+  content: "\e904";
+}
+.icon-Dashboard:before {
+  content: "\e905";
+}
+.icon-Document-Category-List:before {
+  content: "\e906";
+}
+.icon-Document-List:before {
+  content: "\e907";
+}
+.icon-Documents:before {
+  content: "\e908";
+}
+.icon-Logo:before {
+  content: "\e909";
+}
+.icon-Message:before {
+  content: "\e90a";
+}
+.icon-Message-List:before {
+  content: "\e90b";
+}
+.icon-Quicklinks:before {
+  content: "\e90c";
+}
+.icon-Quicklinks-List:before {
+  content: "\e90d";
+}
+.icon-Registered-Users:before {
+  content: "\e90e";
+}
+.icon-Settings:before {
+  content: "\e90f";
+}
+.icon-Subscribers:before {
+  content: "\e910";
+}
+.icon-Todays-Sales:before {
+  content: "\e911";
+}
+.icon-User-category:before {
+  content: "\e912";
+}
+.icon-User-List:before {
+  content: "\e913";
+}
+.icon-Users:before {
+  content: "\e914";
+}
+.icon-Views-Today:before {
+  content: "\e915";
+}
