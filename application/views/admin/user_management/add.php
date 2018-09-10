@@ -38,7 +38,18 @@
                                 autocomplete="off">
                                 <fieldset>
                                     <!-- <p class="text-center text-danger">* Required fields</p> -->
-                                    
+									<div class="form-group">
+                                        <label class="col-md-3 control-label" for="branch_id">Branch <span class="text-danger">*</span></label>
+                                        <div class="col-md-6">
+                                            <select class="form-control" name="branch_id" ng-model="newUser.branch_id"
+                                                required>
+												<option selected="selected" value="">--- Select branch ---</option>
+                                                <option ng-repeat="branch in branches" value="{{branch.id}}" ng-bind="branch.branch_name"></option>
+                                            </select>
+                                            <span class="text-danger" ng-show="addUserForm.branch_id.$error.required && !addUserForm.branch_id.$pristine">This field is required.</span>
+                                        </div>
+                                    </div>  
+
                                     <div class="form-group">
                                         <label class="col-md-3 control-label" for="first_name">First Name <span class="text-danger">*</span></label>
                                         <div class="col-md-6">
@@ -97,13 +108,14 @@
 
                                     <!-- New columns added-->
                                     <div class="form-group">
-                                        <label class="col-md-3 control-label" for="category_id">User Category <span class="text-danger">*</span></label>
+                                        <label class="col-md-3 control-label" for="role_id">Role <span class="text-danger">*</span></label>
                                         <div class="col-md-6">
-                                            <select class="form-control" name="category_id" ng-model="newUser.category_id"
+                                            <select class="form-control" name="role_id" ng-model="newUser.role_id"
                                                 required>
-                                                <option ng-repeat="userCategory in userCategories" value="{{userCategory.id}}" ng-bind="userCategory.category_name"></option>
+												<option selected="selected" value="">--- Select role ---</option>
+                                                <option ng-repeat="role in roles" value="{{role.id}}" ng-bind="role.name"></option>
                                             </select>
-                                            <span class="text-danger" ng-show="addUserForm.category_id.$error.required && !addUserForm.category_id.$pristine">This field is required.</span>
+                                            <span class="text-danger" ng-show="addUserForm.role_id.$error.required && !addUserForm.role_id.$pristine">This field is required.</span>
                                         </div>
                                     </div>  
                                     <div class="form-group">
@@ -163,7 +175,8 @@
 
 <!-- ++++++++++++++++++ Angular Controllers +++++++++++++++ -->
 <script> var editUser = {};
-var userCategories = JSON.parse('<?= $user_categories; ?>');
+var roles = JSON.parse('<?= $roles; ?>');
+var branches = JSON.parse('<?= $branches; ?>');
 </script>
 <script src="<?= NGAPP_PATH.'userManagementCTRL.js'; ?>"></script>
 <!-- ++++++++++++++++++ /Angular Controllers +++++++++++++++ -->

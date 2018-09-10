@@ -35,18 +35,18 @@ if (SITE_MODE == 'demo') {
 	$SERVER_HOST = $_SERVER['HTTP_HOST'];
 
 	if($SERVER_HOST == 'localhost'){
-		$config['base_url'] = 'http://localhost/lead_crm/';
+		$config['base_url'] = 'http://localhost/lead/';
 		$DB_HOST = 'localhost';
 		$DB_USER = 'root';
 		$DB_PASSWORD = '';
 		$DB_NAME = 'lead_crm';
 		error_reporting(E_ERROR);
 		//file upload path
-		define('SITE_DATA_PATH', $_SERVER["DOCUMENT_ROOT"].'/lead_crm/site_data/');
+		define('SITE_DATA_PATH', $_SERVER["DOCUMENT_ROOT"].'/lead/site_data/');
 	}
 }else{ 
 	// live server
-	$config['base_url'] = 'http://localhost/lead_crm/';
+	$config['base_url'] = 'http://localhost/lead/';
 	$DB_HOST = 'localhost';
 	$DB_USER = 'root';
 	$DB_PASSWORD = '';

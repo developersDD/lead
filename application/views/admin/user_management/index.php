@@ -44,7 +44,8 @@
                                         <th>Last Name</th>
                                         <th>Email ID</th>
                                         <th>Gender</th>
-                                        <th>User Category</th>
+                                        <th>Role</th>
+										<th>Branch</th>
                                         <th>Status</th>
                                         <th>Actions</th>
                                     </tr>
@@ -56,7 +57,8 @@
                                         <td><span ng-bind="row.last_name"></span></td>
                                         <td><span ng-bind="row.email_id"></span></td>
                                         <td><span ng-bind="row.gender_id==1?'Male':'Female'"></span></td>
-                                        <td><span ng-bind="row.category_name"></span></td>
+                                        <td><span ng-bind="row.role_name"></span></td>
+										<td><span ng-bind="row.branch_name"></span></td>
                                         <td>
                                             <md-button class="md-btn-sm md-raised md-corner" 
                                                 ng-class="{'md-success':row.status_id==1,'md-danger':row.status_id==2}"
@@ -112,6 +114,8 @@
 
 <!-- ++++++++++++++++++ Angular Controllers +++++++++++++++ -->
 <script> var editUser = {};
-var userCategories = {}; </script>
+var roles = {}; 
+var branches = {};
+</script>
 <script src="<?= NGAPP_PATH.'userManagementCTRL.js'; ?>"></script>
 <!-- ++++++++++++++++++ /Angular Controllers +++++++++++++++ -->

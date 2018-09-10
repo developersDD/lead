@@ -87,6 +87,11 @@
                                                             Delete
                                                         </a>
                                                     </li>
+													<li class="button-dropdown-divider">
+                                                        <a class="" href="<?= base_url('admin/users/'); ?>{{row.id}}">
+                                                            Add User
+                                                        </a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </td>

@@ -34,7 +34,7 @@
                         </div>
                         <div class="panel-body">
                             <form class="form-horizontal" name="addBranchForm"
-                                ng-submit="addBranch(addBranchForm.$valid, addBranchForm)" novalidate
+                                ng-submit="addBranch(addBranchForm.$valid)" novalidate
                                 autocomplete="off">
                                 <fieldset>
                                     <!-- <p class="text-center text-danger">* Required fields</p> -->
@@ -85,12 +85,11 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-md-3 control-label" for="branch_phone">Alternate Mobile No. <span class="text-danger">*</span></label>
+                                        <label class="col-md-3 control-label" for="branch_phone">Alternate Contact No. </label>
                                         <div class="col-md-6">
                                             <input name="branch_phone" type="text" ng-model="newBranch.branch_phone"
-                                                   placeholder="Alternate Mobile No." class="form-control" ng-pattern="mobilePattern"
-                                                   ng-maxlength="10" ng-minlength="10" maxlength="10" required>
-                                            <span class="text-danger" ng-show="addBranchForm.branch_phone.$error.required && !addBranchForm.branch_phone.$pristine">This field is required.</span>
+                                                   placeholder="Alternate Contact Number." class="form-control" ng-pattern="mobilePattern"
+                                                   ng-maxlength="10" ng-minlength="10" maxlength="10">
                                             <span class="text-danger" ng-show="addBranchForm.branch_phone.$error.pattern && !addBranchForm.branch_phone.$pristine">Invaid input.</span>
                                             <span class="text-danger" ng-show="(addBranchForm.branch_phone.$error.minlength || addBranchForm.branch_phone.$error.maxlength) && !addBranchForm.branch_phone.$error.pattern && !addBranchForm.branch_phone.$pristine">Mobile no. should be of 10 digit.</span>
                                         </div>
@@ -114,7 +113,7 @@
                                             <md-button class="md-btn-md md-raised md-corner" ng-click="loadBranches();">Cancel</md-button>
                                             <md-button type="submit" 
                                                 class="md-btn-md md-raised md-primary md-button md-ink-ripple" 
-                                                ng-disabled="addBranchForm.$invalid">Submit</md-button>
+												ng-disabled="addBranchForm.$invalid">Submit</md-button>
                                         </div>
                                     </div>
                                 </fieldset>

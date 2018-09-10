@@ -1,24 +1,28 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 require APPPATH . 'controllers/Base_Controller.php';
 
-class Users extends Base_Controller {
+class Users extends Base_Controller
+{
 
-	function __construct(){
+	function __construct()
+	{
 		parent::__construct();
 
 		$this->primaryTable = 'users';
-		$this->categoryTable = 'user_category';
+		$this->rolesTable = 'roles';
+		$this->branchesTable = 'branches';
 	}
 
-	public function index(){
+	public function index()
+	{
 
-		if(!$this->checkLogin()){
+		if (!$this->checkLogin()) {
 			redirect(base_url());
 		}
 
-		$pageData['header_title'] = APP_NAME.' | User Management';
+		$pageData['header_title'] = APP_NAME . ' | User Management';
 		$pageData['page_title'] = 'User Management';
 		$pageData['parent_menu'] = 'user_management';
 		$pageData['child_menu'] = 'users';
@@ -26,42 +30,52 @@ class Users extends Base_Controller {
 		$this->load->view('admin/user_management/index', $pageData);
 	}
 
-	
+
 
 	/**
 	 * [ngGetUsers get users list]
 	 * @return [object] [response object]
 	 */
-	function ngGetUsers(){
-		$select = 'users.*, user_category.category_name';
-		$from = $this->primaryTable;
-		$where = 'users.status_id !='.DELETE;
-		$records = 2;
-		$join =  $this->categoryTable." ON users.category_id = user_category.id";
-		$users = $this->base_model->customSelectQuery($select, $this->primaryTable , $where, $records, $join);
-		$response = array('status' => TRUE, 'message' => 'Users found successfully.', 'data' => $users);
+	function ngGetUsers()
+	{
+		$sql = "SELECT u.*, r.name as role_name,b.branch_name as branch_name 
+		FROM users u 
+		LEFT JOIN roles r ON u.role_id = r.id LEFT JOIN branches b ON u.branch_id = b.id
+		WHERE u.status_id != ". DELETE . ";";
+
+		$result = $this->db->query($sql);
+		$response = $result->result();
 		echo json_encode($response);
 	}
+
 
 	/**
 	 * [add load add new user wizard]
 	 */
-	function add(){
-		if(!$this->checkLogin()){
+	function add()
+	{
+		if (!$this->checkLogin()) {
 			redirect(base_url());
 		}
 
-		$pageData['header_title'] = APP_NAME.' | Add User';
+		$pageData['header_title'] = APP_NAME . ' | Add User';
 		$pageData['page_title'] = 'User Management';
 		$pageData['parent_menu'] = 'user_management';
 		$pageData['child_menu'] = 'add_new_user';
 
-		//get User category
+		//get roles
 		$where = array('status_id =' => ACTIVE);
 		$select = '*';
 		$records = 2;
-		$user_categories = $this->base_model->getCommon($this->categoryTable, $where, $select, $records);
-		$pageData['user_categories'] = json_encode($user_categories);
+		$roles = $this->base_model->getCommon($this->rolesTable, $where, $select, $records);
+		$pageData['roles'] = json_encode($roles);
+
+		//get branches
+		$where = array('status_id =' => ACTIVE);
+		$select = '*';
+		$records = 2;
+		$branches = $this->base_model->getCommon($this->branchesTable, $where, $select, $records);
+		$pageData['branches'] = json_encode($branches);
 
 		$this->load->view('admin/user_management/add', $pageData);
 	}
@@ -70,77 +84,81 @@ class Users extends Base_Controller {
 	 * [ngSave save new user]
 	 * @return [object] [reponse object]
 	 */
-	function ngSave(){
+	function ngSave()
+	{
 		$postData = json_decode($_POST['model']);
 
 		$uploadResult = '';
 		$invalidFile = true;
-		if(count($_FILES)>0){
-			$config['upload_path']          = SITE_DATA_PATH.'user_profiles/';
-	        $config['allowed_types']        = 'gif|jpg|jpeg|png';
-	        $config['max_size']             = 1024;
+		if (count($_FILES) > 0) {
+			$config['upload_path'] = SITE_DATA_PATH . 'user_profiles/';
+			$config['allowed_types'] = 'gif|jpg|jpeg|png';
+			$config['max_size'] = 2048;
 	        /*$config['max_width']            = 1024;
 	        $config['max_height']           = 768;*/
-	        $this->load->library('upload', $config);
-	        $uploadResult = $this->upload->do_upload('file-0');
-	        
-	        if(!$uploadResult){
-	        	$invalidFile = false;
-	        }
-	    }
-	    $saveResult = false;
-	    $response = '';
-        if($invalidFile == false){
-        	$response = array('status' => false, 'message' => 'Invalid image.', 'data' => '');
-        }else{
-        	print_r($profile);
-		//get user profile
-		$where = array('email_id' => $postData->email_id, 'status_id !=' => DELETE);
-		$profile = $this->base_model->getCommon($this->primaryTable, $where);
-		if(!$profile){
-			$where = array('contact_no' => $postData->contact_no);
-			$profile = $this->base_model->getCommon($this->primaryTable, $where);
-		}
+			$this->load->library('upload', $config);
+			$uploadResult = $this->upload->do_upload('file-0');
 
-		if(!$profile){
-			$saveData = array(
-						'first_name'	=>	$postData->first_name,
-						'last_name'		=>	$postData->last_name,
-						'email_id'		=>	$postData->email_id,
-						'gender_id'		=>	$postData->gender_id,
-						'contact_no'	=>	$postData->contact_no,
-						'category_id'	=>	$postData->category_id,
-						'descripton'	=>	$postData->descripton,
-						'created_by'	=>	$this->session->userdata['userProfile']->id
-					);
-			if($uploadResult!=''){
-        		$uploadDetails = array('upload_data' => $this->upload->data());
-        		$saveData['user_profile']	=	$uploadDetails['upload_data']['file_name'];
-        	}
-			$insertID = $this->base_model->saveCommon($this->primaryTable, $saveData);
-
-			if($insertID){
-				$response = array('status' => TRUE, 'message' => 'User added successfully.', 'data' => '');
-				$this->setSessionSuccessMessage('User added successfully.');
-			}else{
-				$response = array('status' => FALSE, 'message' => 'Failed to add user.', 'data' => '');
+			if (!$uploadResult) {
+				$invalidFile = false;
 			}
-		}else{
-			$response = array('status' => FALSE, 'message' => 'User already registered.', 'data' => '');
 		}
+		// print_r($uploadResult);die;
+		$saveResult = false;
+		$response = '';
+		if ($invalidFile == false) {
+			$response = array('status' => false, 'message' => 'Invalid image.', 'data' => '');
+		} else {
+			print_r($profile);
+		//get user profile
+			$where = array('email_id' => $postData->email_id, 'status_id !=' => DELETE);
+			$profile = $this->base_model->getCommon($this->primaryTable, $where);
+			if (!$profile) {
+				$where = array('contact_no' => $postData->contact_no);
+				$profile = $this->base_model->getCommon($this->primaryTable, $where);
+			}
+
+			if (!$profile) {
+				$saveData = array(
+					'first_name' => $postData->first_name,
+					'last_name' => $postData->last_name,
+					'email_id' => $postData->email_id,
+					'gender_id' => $postData->gender_id,
+					'contact_no' => $postData->contact_no,
+					'branch_id' => $postData->branch_id,
+					'role_id' => $postData->role_id,
+					'descripton' => $postData->descripton,
+					'created_by' => $this->session->userdata['userProfile']->id
+				);
+				if ($uploadResult != '') {
+					$uploadDetails = array('upload_data' => $this->upload->data());
+					$saveData['user_profile'] = $uploadDetails['upload_data']['file_name'];
+				}
+				$insertID = $this->base_model->saveCommon($this->primaryTable, $saveData);
+
+				if ($insertID) {
+					$response = array('status' => true, 'message' => 'User added successfully.', 'data' => '');
+					$this->setSessionSuccessMessage('User added successfully.');
+				} else {
+					$response = array('status' => false, 'message' => 'Failed to add user.', 'data' => '');
+				}
+			} else {
+				$response = array('status' => false, 'message' => 'User already registered.', 'data' => '');
+			}
 		}
-		echo json_encode($response);	
+		echo json_encode($response);
 	}
 
 	/**
 	 * [edit load edit user wizard]
 	 */
-	function edit($id){
-		if(!$this->checkLogin()){
+	function edit($id)
+	{
+		if (!$this->checkLogin()) {
 			redirect(base_url());
 		}
 
-		$pageData['header_title'] = APP_NAME.' | Edit User';
+		$pageData['header_title'] = APP_NAME . ' | Edit User';
 		$pageData['page_title'] = 'User Management';
 		$pageData['parent_menu'] = 'user_management';
 		$pageData['child_menu'] = 'users';
@@ -153,10 +171,12 @@ class Users extends Base_Controller {
 		$where = array('status_id =' => ACTIVE);
 		$select = '*';
 		$records = 2;
-		$user_categories = $this->base_model->getCommon($this->categoryTable, $where, $select, $records);
+		$roles = $this->base_model->getCommon($this->rolesTable, $where, $select, $records);
+		$branches = $this->base_model->getCommon($this->branchesTable, $where, $select, $records);
 
 		$pageData['user_details'] = json_encode($profile);
-		$pageData['user_categories'] = json_encode($user_categories);
+		$pageData['roles'] = json_encode($roles);
+		$pageData['branches'] = json_encode($branches);
 
 		$this->load->view('admin/user_management/edit', $pageData);
 	}
@@ -166,72 +186,74 @@ class Users extends Base_Controller {
 	 * [ngUpdateDetails update user details]
 	 * @return [object] [response object]
 	 */
-	function ngUpdateDetails(){
+	function ngUpdateDetails()
+	{
 		$postData = json_decode($_POST['model']);
 		$uploadResult = '';
 		$invalidFile = true;
-		if(count($_FILES)>0){
-			$config['upload_path']          = SITE_DATA_PATH.'user_profiles/';
-	        $config['allowed_types']        = 'gif|jpg|jpeg|png';
-	        $config['max_size']             = 1024;
+		if (count($_FILES) > 0) {
+			$config['upload_path'] = SITE_DATA_PATH . 'user_profiles/';
+			$config['allowed_types'] = 'gif|jpg|jpeg|png';
+			$config['max_size'] = 2048;
 	        /*$config['max_width']            = 1024;
 	        $config['max_height']           = 768;*/
 
 
-	        $this->load->library('upload', $config);
-	        
-	        $uploadResult = $this->upload->do_upload('file-0');
-	        //echo $this->upload->display_errors();
-	        if(!$uploadResult){
-	        	$invalidFile = false;
-	        }
+			$this->load->library('upload', $config);
 
-	    }
-	    $result = false;
-	    $response = '';
-        if($invalidFile == false){
-        	$response = array('status' => false, 'message' => 'Invalid image.', 'data' => '');
-        }else{
+			$uploadResult = $this->upload->do_upload('file-0');
+	        //echo $this->upload->display_errors();
+			if (!$uploadResult) {
+				$invalidFile = false;
+			}
+
+		}
+		$result = false;
+		$response = '';
+		if ($invalidFile == false) {
+			$response = array('status' => false, 'message' => 'Invalid image.', 'data' => '');
+		} else {
 
 			$where = array('id !=' => $postData->id, 'email_id' => $postData->email_id);
 			$profile = $this->base_model->getCommon($this->primaryTable, $where);
 
-			if(!$profile){
+			if (!$profile) {
 				$where = array('id !=' => $postData->id, 'contact_no' => $postData->contact_no);
 				$profile = $this->base_model->getCommon($this->primaryTable, $where);
 			}
 
-			if(!$profile){
+			if (!$profile) {
 				$updateData = array(
-							'first_name'	=>	$postData->first_name,
-							'last_name'		=>	$postData->last_name,
+					'first_name' => $postData->first_name,
+					'last_name' => $postData->last_name,
 							// 'email_id'		=>	$postData->email_id,
-							'gender_id'		=>	$postData->gender_id,
+					'gender_id' => $postData->gender_id,
 							// 'contact_no'	=>	$postData->contact_no,
-							'category_id'	=>	$postData->category_id,
-							'descripton'	=>	$postData->descripton,
-							'status_id'		=>	$postData->status_id,
-							'updated_by'	=>	$this->session->userdata['userProfile']->id,
-							'updated_date'	=>	date('Y-m-d h:i:s')
-						);
+					'role_id' => $postData->role_id,
+					'branch_id' => $postData->branch_id,
+					'descripton' => $postData->descripton,
+					'status_id' => $postData->status_id,
+					'updated_by' => $this->session->userdata['userProfile']->id,
+					'updated_date' => date('Y-m-d h:i:s')
+				);
 
-				if($uploadResult!=''){
+				if ($uploadResult != '') {
 					$uploadDetails = array('upload_data' => $this->upload->data());
-	        		$updateData['user_profile']	=$uploadDetails['upload_data']['file_name'];
-	        	}
+					$updateData['user_profile'] = $uploadDetails['upload_data']['file_name'];
+				}
 	        	//print_r($updateData);die;
 				$where = array('id' => $postData->id);
 
 				$result = $this->base_model->updateCommon($this->primaryTable, $updateData, $where);
 
-				if($result){
-					$response = array('status' => TRUE, 'message' => 'User updated successfully.', 'data' => '');
+				if ($result) {
+					$response = array('status' => true, 'message' => 'User updated successfully.', 'data' => '');
 					$this->setSessionSuccessMessage('User updated successfully.');
-				}else{
-					$response = array('status' => FALSE, 'message' => 'Failed to update user.', 'data' => '');
+				} else {
+					$response = array('status' => false, 'message' => 'Failed to update user.', 'data' => '');
 				}
-			}else{
-				$response = array('status' => FALSE, 'message' => 'Duplicate email id or mobile no.', 'data' => '');
+			} else {
+				$response = array('status' => false, 'message' => 'Duplicate email id or mobile no.', 'data' => '');
 			}
 		}
 		echo json_encode($response);
@@ -240,12 +262,13 @@ class Users extends Base_Controller {
 	/**
 	 * [details load user details wizard]
 	 */
-	function details($id){
-		if(!$this->checkLogin()){
+	function details($id)
+	{
+		if (!$this->checkLogin()) {
 			redirect(base_url());
 		}
 
-		$pageData['header_title'] = APP_NAME.' | User Details';
+		$pageData['header_title'] = APP_NAME . ' | User Details';
 		$pageData['page_title'] = 'User Management';
 		$pageData['parent_menu'] = 'user_management';
 		$pageData['child_menu'] = 'users';
@@ -259,8 +282,10 @@ class Users extends Base_Controller {
 		$where = array('status_id =' => ACTIVE);
 		$select = '*';
 		$records = 2;
-		$user_categories = $this->base_model->getCommon($this->categoryTable, $where, $select, $records);
-		$pageData['user_categories'] = json_encode($user_categories);
+		$roles = $this->base_model->getCommon($this->rolesTable, $where, $select, $records);
+		$branches = $this->base_model->getCommon($this->branchesTable, $where, $select, $records);
+		$pageData['roles'] = json_encode($roles);
+		$pageData['branches'] = json_encode($branches);
 
 		$this->load->view('admin/user_management/details', $pageData);
 	}
@@ -269,7 +294,8 @@ class Users extends Base_Controller {
 	 * [delete update user record to deleted]
 	 * @param  [integere] $id [user id]
 	 */
-	function delete($id){
+	function delete($id)
+	{
 
 		$where = array('id' => $id);
 		$updateData = array('status_id' => DELETE);
@@ -285,14 +311,15 @@ class Users extends Base_Controller {
 	 * [updateStatus update user account status]
 	 * @return [object] [response object]
 	 */
-	function updateStatus(){
+	function updateStatus()
+	{
 		$this->setPost();
 
 		$postData = $_POST;
 
-		if($postData->status_id == 1){
+		if ($postData->status_id == 1) {
 			$updateData = array('status_id' => 2);
-		}else{
+		} else {
 			$updateData = array('status_id' => 1);
 		}
 
@@ -300,7 +327,7 @@ class Users extends Base_Controller {
 
 		$result = $this->base_model->updateCommon($this->primaryTable, $updateData, $where);
 
-		$response = array('status' => TRUE, 'message' => 'User status updated successfully.');
+		$response = array('status' => true, 'message' => 'User status updated successfully.');
 
 		echo json_encode($response);
 	}

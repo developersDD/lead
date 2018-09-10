@@ -36,7 +36,17 @@
                             <form class="form-horizontal" name="editUserForm"  
                                 ng-submit="updateUser(editUserForm.$valid, editUserForm)" novalidate autocomplete="off">
                                 <fieldset>
-                                    
+								<div class="form-group">
+                                        <label class="col-md-3 control-label" for="branch_id">Branch <span class="text-danger">*</span></label>
+                                        <div class="col-md-6">
+                                            <select class="form-control" name="branch_id" ng-model="editUser.branch_id"
+                                                required>
+												<option selected="selected" value="">--- Select branch ---</option>
+                                                <option ng-repeat="branch in branches" value="{{branch.id}}" ng-bind="branch.branch_name"></option>
+                                            </select>
+                                            <span class="text-danger" ng-show="addUserForm.branch_id.$error.required && !addUserForm.branch_id.$pristine">This field is required.</span>
+                                        </div>
+                                    </div>                                      
 
                                     <div class="form-group">
                                         <label class="col-md-3 control-label" for="first_name">First Name <span class="text-danger">*</span></label>
@@ -107,15 +117,15 @@
                                             <span class="text-danger" ng-show="editUserForm.status_id.$error.required && !editUserForm.status_id.$pristine">This field is required.</span>
                                         </div>
                                     </div>
-                                    <!-- New columns added-->
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label" for="category_id">User Category <span class="text-danger">*</span></label>
+									<div class="form-group">
+                                        <label class="col-md-3 control-label" for="role_id">Role <span class="text-danger">*</span></label>
                                         <div class="col-md-6">
-                                            <select class="form-control" name="category_id" ng-model="editUser.category_id"
-                                                required >
-                                                <option ng-repeat="userCategory in userCategories" value="{{userCategory.id}}" ng-bind="userCategory.category_name"></option>
+                                            <select class="form-control" name="role_id" ng-model="editUser.role_id"
+                                                required>
+												<option selected="selected" value="">--- Select role ---</option>
+                                                <option ng-repeat="role in roles" value="{{role.id}}" ng-bind="role.name"></option>
                                             </select>
-                                            <span class="text-danger" ng-show="editUserForm.category_id.$error.required && !editUserForm.category_id.$pristine">This field is required.</span>
+                                            <span class="text-danger" ng-show="editUserForm.role_id.$error.required && !editUserForm.role_id.$pristine">This field is required.</span>
                                         </div>
                                     </div>  
                                     <div class="form-group">
@@ -144,8 +154,8 @@
                                         </div>
                                         <div ng-if="editUser.user_profile">
                                         <label class="col-md-1" for="date">Last Upload</label>
-                                        <div class="col-md-3">
-                                            <img class="last-upload" src="<?= base_url('site_data/user_profiles/'); ?>{{editUser.user_profile}}" alt="User Profile">
+                                        <div class="col-md-2">
+                                            <img class="last-upload img-responsive" src="<?= base_url('site_data/user_profiles/'); ?>{{editUser.user_profile}}" alt="User Profile">
                                         </div>
                                         </div>
                                     </div>
@@ -181,7 +191,8 @@
 <!-- ++++++++++++++++++ Angular Controllers +++++++++++++++ -->
 <script>
     var editUser = JSON.parse('<?= $user_details; ?>');
-    var userCategories = JSON.parse('<?= $user_categories; ?>');
+	var roles = JSON.parse('<?= $roles; ?>');
+	var branches = JSON.parse('<?= $branches; ?>');
 </script>
 <script src="<?= NGAPP_PATH.'userManagementCTRL.js'; ?>"></script>
 <!-- ++++++++++++++++++ /Angular Controllers +++++++++++++++ -->
