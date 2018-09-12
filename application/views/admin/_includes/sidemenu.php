@@ -73,6 +73,30 @@
                                     </a>
                                 </li>
                             </ul>
+						</li>
+						
+						<li class="<?= $parent_menu=='inventory_management'?'active':''; ?>">
+                            <a href="<?= base_url('admin/branches'); ?>">
+                                <i class="icon-Users" data-name="branches" data-size="18" data-c="#418BCA" data-hc="#418BCA" data-loop="true"></i>
+                                <span class="title">Inventory</span>
+                                <span class="fa arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="<?= $child_menu=='products'?'active':''; ?>">
+                                    <a href="<?= base_url('admin/inventory'); ?>">
+                                        <!-- <i class="fa fa-angle-double-right"></i> -->
+                                        <span class="icon-User-List"></span>
+                                        Product List
+                                    </a>
+                                </li>
+                                <li class="<?= $child_menu=='add_new_product'?'active':''; ?>">
+                                    <a href="<?= base_url('admin/inventory/add'); ?>">
+                                        <!-- <i class="fa fa-angle-double-right"></i> -->
+                                        <span class="icon-Add-User"></span>
+                                        Add New Product
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
 
                     </ul>

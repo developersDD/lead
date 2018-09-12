@@ -11,6 +11,7 @@ class Branches extends Base_Controller
 		parent::__construct();
 
 		$this->primaryTable = 'branches';
+		$this->productTable = 'products';
 	}
 
 	public function index()
