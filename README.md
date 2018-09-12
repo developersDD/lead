@@ -1,7 +1,6 @@
-# **Sedemac**
-[![pipeline status](https://gitlab.aarnaapps.com/aarnaprojects/sedemac/badges/staging/pipeline.svg)](https://gitlab.aarnaapps.com/aarnaprojects/sedemac/commits/staging)
+# **Lead Management**
 
-## Aarna Systems
+## SNP Infotech
 
 ### Framework
 ```
@@ -17,15 +16,9 @@ Mockup Link - NA
 
 ### Local Development Environment
 ```
-Local URL - http://localhost/ci/sedemac
+Local URL - http://localhost/lead/
 Database Server - Local Webserver
-Database Name - ci-sedemac_development
+Database Name - lead_crm
 ```
 
-### Client Review Environment
-```
-Review URL - https://development.aarnaapps.com/sedemac/
-Database Server - https://development.aarnaapps.com
-Database Name - ci-sedemac_development
-```
 
